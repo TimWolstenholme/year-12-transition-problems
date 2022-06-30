@@ -1,10 +1,10 @@
-def permutations(s):        
-    if(len(s)==1): return [s]
+def permutations(code):        
+    if(len(code)==1): return [code]
     result=[]
-    for i,e in enumerate(s):
-        result += [e+p for p in permutations(s[:i]+s[i+1:])]
+    for i,e in enumerate(code):
+        result += [e+p for p in permutations(code[:i]+code[i+1:])]
     return result
-code=int(input("what is the 4 digit code: "))
-perms=permutations(str(code))
+code=(input("what is the 4 digit code: "))
+perms=permutations((code))
 for code in perms:
     print(code)
