@@ -15,36 +15,7 @@ class ClassificationTree:
     def __init__(self,head):
         self.head=head
  
-    def _search_for_node(self,node:TreeNode,node_to_search:TreeNode) -> TreeNode:
-        if node:
-            self._search_for_node(node.left,node_to_search)
-            if node==node_to_search:
-                print(type(node))
-                return node
-            self._search_for_node(node.right,node_to_search)
-
-    def add_left(self,node,data):
-        print(self.head)
-        parent=self._search_for_node(self.head,node)
-        print(parent)
-        parent.left=TreeNode(data)
-
-    def add_right(self,node,data):
-        parent=self._search_for_node(self.head,node)
-        parent.right=TreeNode(data)
-
-    def printInorder(self,root):
- 
-        if root:
- 
-        # First recur on left child
-            self.printInorder(root.left)
- 
-        # then print the data of node
-            print(root.data),
- 
-        # now recur on right child
-            self.printInorder(root.right)
+   
 
 def build_tree():
     tree=ClassificationTree(TreeNode("Is the animal a mammal? "))
