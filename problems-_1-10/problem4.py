@@ -1,6 +1,3 @@
-#classification tree for animals
-#Binary tree will be constructed to store the conditions to better model the classification
-#The data in each node will hold the question to be asked use a loop!
 
 
 class TreeNode:
