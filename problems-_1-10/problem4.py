@@ -21,7 +21,7 @@ def build_tree():
     tree=ClassificationTree(TreeNode("Is the animal a mammal? "))
     head=tree.head
     head.right=TreeNode("Is it domesticated? ")
-    print(type(head.right))
+
     head.right.left=TreeNode("Does it live at the ocean")
     head.right.right=TreeNode("Do we ride it? ")
     head.right.left.left=TreeNode("Are its children called cubs")
@@ -74,7 +74,6 @@ if __name__ =='__main__':
             print("Please use Y/N to show whether the question was true or false")
             desicion=input("format= Y/N  ")
         if desicion.upper()=='Y':
-            print("Hi")
             cur_node=cur_node.right
         else:
             cur_node=cur_node.left
