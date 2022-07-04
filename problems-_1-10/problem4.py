@@ -1,8 +1,6 @@
 #classification tree for animals
 #Binary tree will be constructed to store the conditions to better model the classification
-# A method on the ClassificationTree class will print all the data in the tree in an inorder manner
 #The data in each node will hold the question to be asked use a loop!
-
 
 
 class TreeNode:
