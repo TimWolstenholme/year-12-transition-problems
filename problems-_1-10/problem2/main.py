@@ -5,14 +5,12 @@ check_valid= lambda numberplate: re.match(pattern,numberplate)
 with open('problem2data.txt','r') as f:
     for line in f:
         numberplate,time=line.split('-')
-
-
-    valid=check_valid(numberplate)
-    if not valid:
-        print("Numberplate invalid")
-    else:
-        print("Numberplate valid")
-    time_in_hours=time/3600
-    speed=1/time_in_hours
-    speeding="speeding" if speed>70 else "not speeding"
-    print(f"{numberplate} had a speed of {speed} and was {speeding}")
+        valid=check_valid(numberplate)
+        if not valid:
+            print("Numberplate invalid")
+        else:
+            print("Numberplate valid")
+        time_in_hours=time/3600
+        speed=1/time_in_hours
+        speeding="speeding" if speed>70 else "not speeding"
+        print(f"{numberplate} had a speed of {speed} and was {speeding}")
